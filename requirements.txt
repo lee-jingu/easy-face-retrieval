@@ -1,0 +1,11 @@
+gradio
+icrawler
+facenet-pytorch
+lxml
+beautifulsoup4
+ftfy
+regex
+tqdm
+wget
+repackage
+git+https://github.com/openai/CLIP.git
