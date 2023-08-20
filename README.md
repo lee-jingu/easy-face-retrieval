@@ -61,7 +61,7 @@ python run.py \
 
 ### Results
 ![Image](assets/result_img.png)
-![Image](assets/result_img2.png)
+![Image](assets/result_metadata.png)
 
 ## References
 
