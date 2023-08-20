@@ -11,6 +11,7 @@ from easyfaret import EasyFaceRetreival
 def get_args() -> Namespace:
     parser = ArgumentParser()
     parser.add_argument("--path", type=str, default="data")
+    parser.add_argument("-q", "--queries", nargs="+", type=str, default=[])
     parser.add_argument(
         "--share", action="store_true", help="share your model on gradio"
     )
@@ -24,7 +25,10 @@ def get_args() -> Namespace:
 
 def main():
     args = get_args()
-    retreival = EasyFaceRetreival.from_images(args.path)
+    if len(args.queries) > 0:
+        retreival = EasyFaceRetreival.from_queries(args.queries)
+    else:
+        retreival = EasyFaceRetreival.from_images(args.path)
 
     def search(image):
         results = retreival.search(image, n_results=1)

@@ -40,6 +40,29 @@ conda install -c conda-forge faiss-gpu
 pip install -r requirements.txt
 ```
 
+## Run Demo
+
+- Simple Demo
+
+```bash
+python run.py -q 유재석 박명수 아이유 한지민
+```
+
+- Advanced
+
+```bash
+python run.py \
+--queries ${crawling queries 없으면 비우기} \
+--path ${image path} \ # 이미지 경로 쿼리 입력 시 크롤링 저장 경로
+--share \ # Gradio Share
+--host ${host} \ # Gradio Server name
+--port ${port} \ # Gradio Server port
+```
+
+### Results
+![Image](assets/result_img.png)
+![Image](assets/result_img2.png)
+
 ## References
 
 - [Faiss](https://github.com/facebookresearch/faiss)
