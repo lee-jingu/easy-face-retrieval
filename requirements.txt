@@ -6,5 +6,6 @@ beautifulsoup4
 ftfy
 regex
 tqdm
+wget
 repackage
 git+https://github.com/openai/CLIP.git
