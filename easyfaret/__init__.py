@@ -10,5 +10,4 @@ def set_ckpt_path(path: Path):
 
 from .dbs.crawler import Crawler
 from .dbs.faissdb import FaissDB
-from .detector.facenet import FaceDetector
 from .representation.farl import FaRL

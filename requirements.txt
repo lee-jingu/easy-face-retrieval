@@ -1,7 +1,10 @@
 gradio
 icrawler
 facenet-pytorch
+lxml
+beautifulsoup4
 ftfy
 regex
 tqdm
+repackage
 git+https://github.com/openai/CLIP.git
