@@ -14,11 +14,15 @@ Python 3.8+
 
 ### 아래 설치는 CUDA 12.1을 기준으로 합니다 (CUDA 11.4 이상 권장)
 
+- install conda
+
+[https://docs.conda.io](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html#regular-installation)
+
 - create environment
 
 ```bash
 conda create -n easyFaret python=3.8
-conda activate faret
+conda activate easyFaret
 ```
 
 - install pytorch
@@ -27,7 +31,7 @@ conda activate faret
 conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch-nightly -c nvidia
 ```
 
-- install faiss-gpu
+- install faiss-gpu (장비에 gpu가 없다면 faiss-cpu로 바꿔 설치)
 
 ```bash
 conda install -c conda-forge faiss-gpu
@@ -58,6 +62,8 @@ python run.py \
 --host ${host} \ # Gradio Server name
 --port ${port} \ # Gradio Server port
 ```
+
+- 두번째 실행시 -q / --queries 옵션을 제외하고 실행하면 미리 받아둔 이미지를 재사용하며 실행됩니다
 
 ### Results
 ![Image](assets/result_img.png)
